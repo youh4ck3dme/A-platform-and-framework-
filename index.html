@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXIFY & SAVE4WEB PWA Showcase</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://esm.sh/three@^0.166.1",
+          "gsap": "https://esm.sh/gsap@^3.12.5"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header id="landing-header" role="banner" aria-labelledby="main-title">
+      <div class="collaboration-title">NEXIFY STUDIO & SAVE4WEB</div>
+      <h1 id="main-title" class="main-title">🚀 Ultra-Premium PWA Showcase</h1>
+      <p class="subtitle">
+        Revolučný Reklamný Katalóg Pre Budúcnosť Webových Aplikácií
+      </p>
+      <button id="enter-btn">VSTÚPIŤ DO BUDÚCNOSTI</button>
+    </header>
+
+    <main id="showcase-container" class="hidden" aria-live="polite">
+        <div id="framework-info"></div>
+    </main>
+
+    <aside id="detail-view" class="hidden" role="dialog" aria-modal="true" aria-labelledby="detail-name">
+      <button id="back-btn" aria-label="Go back to framework gallery">&larr; Späť do Galérie</button>
+      <div id="detail-content">
+          <img id="detail-logo" src="" alt="Framework Logo" />
+          <h2 id="detail-name"></h2>
+          <p id="detail-description"></p>
+      </div>
+    </aside>
+
+    <footer id="performance-dashboard" role="contentinfo" aria-label="Real-time performance metrics">
+      <div class="metric">
+        <span>FPS</span>
+        <span id="fps-metric">--</span>
+      </div>
+      <div class="metric">
+        <span>Memory</span>
+        <span id="mem-metric">--</span>
+      </div>
+      <div class="metric">
+        <span>Draw Calls</span>
+        <span id="draw-metric">--</span>
+      </div>
+    </footer>
+
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
